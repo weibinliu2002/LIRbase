@@ -1,0 +1,13 @@
+{% extends "lir/base.html" %}
+
+{% block title %}Search - LIRBase{% endblock %}
+
+{% block content %}
+<h1>Search</h1>
+<p>请选择搜索方式：</p>
+
+<ul>
+    <li><a href="/search/region/">Search by genomic location</a></li>
+    <li><a href="/search/id/">Search by LIR identifier</a></li>
+</ul>
+{% endblock %}

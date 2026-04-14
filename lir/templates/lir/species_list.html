@@ -1,0 +1,38 @@
+{% extends "lir/base.html" %}
+
+{% block title %}{{ division }} Species{% endblock %}
+
+{% block content %}
+<h1>{{ division }} 物种列表</h1>
+
+{% if species_list %}
+    <table>
+        <thead>
+            <tr>
+                <th>Accession</th>
+                <th>Species</th>
+                <th>Division</th>
+                <th>Ploidy</th>
+                <th>Number of LIR</th>
+                <th>Genome Length</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for sp in species_list %}
+            <tr>
+                <td>
+                    <a href="{% url 'species_detail' sp.accession %}">{{ sp.accession }}</a>
+                </td>
+                <td>{{ sp.species }}</td>
+                <td>{{ sp.division }}</td>
+                <td>{{ sp.ploidy }}</td>
+                <td>{{ sp.number_of_lir }}</td>
+                <td>{{ sp.genome_length }}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+{% else %}
+    <p>这个分类下暂时没有物种数据。</p>
+{% endif %}
+{% endblock %}

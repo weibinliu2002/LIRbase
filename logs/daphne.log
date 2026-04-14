@@ -1,0 +1,1057 @@
+Watching for file changes with StatReloader
+Watching for file changes with StatReloader
+/data/web/LIRbase/config/settings.py changed, reloading.
+Performing system checks...
+
+System check identified no issues (0 silenced).
+April 10, 2026 - 10:42:28 AM
+Django version 6.0.4, using settings 'config.settings'
+Starting development server at http://0.0.0.0:8001/
+Quit the server with CONTROL-C.
+
+WARNING: This is a development server. Do not use it in a production setting. Use a production WSGI or ASGI server instead.
+For more information on production servers see: https://docs.djangoproject.com/en/6.0/howto/deployment/
+Traceback (most recent call last):
+  File "/data/web/LIRbase/manage.py", line 22, in <module>
+    main()
+  File "/data/web/LIRbase/manage.py", line 18, in main
+    execute_from_command_line(sys.argv)
+  File "/data/web/LIRbase/venv/lib/python3.12/site-packages/django/core/management/__init__.py", line 443, in execute_from_command_line
+    utility.execute()
+  File "/data/web/LIRbase/venv/lib/python3.12/site-packages/django/core/management/__init__.py", line 383, in execute
+    settings.INSTALLED_APPS
+  File "/data/web/LIRbase/venv/lib/python3.12/site-packages/django/conf/__init__.py", line 75, in __getattr__
+    self._setup(name)
+  File "/data/web/LIRbase/venv/lib/python3.12/site-packages/django/conf/__init__.py", line 62, in _setup
+    self._wrapped = Settings(settings_module)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/data/web/LIRbase/venv/lib/python3.12/site-packages/django/conf/__init__.py", line 162, in __init__
+    mod = importlib.import_module(self.SETTINGS_MODULE)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/anaconda3/lib/python3.12/importlib/__init__.py", line 90, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<frozen importlib._bootstrap>", line 1387, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1360, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1331, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 935, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 995, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/data/web/LIRbase/config/settings.py", line 120, in <module>
+    SOFT_DIR = BASE_DIR + "/soft/"
+               ~~~~~~~~~^~~~~~~~~~
+TypeError: unsupported operand type(s) for +: 'PosixPath' and 'str'
+Traceback (most recent call last):
+  File "/data/web/LIRbase/manage.py", line 22, in <module>
+    main()
+  File "/data/web/LIRbase/manage.py", line 18, in main
+    execute_from_command_line(sys.argv)
+  File "/data/web/LIRbase/venv/lib/python3.12/site-packages/django/core/management/__init__.py", line 443, in execute_from_command_line
+    utility.execute()
+  File "/data/web/LIRbase/venv/lib/python3.12/site-packages/django/core/management/__init__.py", line 383, in execute
+    settings.INSTALLED_APPS
+  File "/data/web/LIRbase/venv/lib/python3.12/site-packages/django/conf/__init__.py", line 75, in __getattr__
+    self._setup(name)
+  File "/data/web/LIRbase/venv/lib/python3.12/site-packages/django/conf/__init__.py", line 62, in _setup
+    self._wrapped = Settings(settings_module)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/data/web/LIRbase/venv/lib/python3.12/site-packages/django/conf/__init__.py", line 162, in __init__
+    mod = importlib.import_module(self.SETTINGS_MODULE)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/anaconda3/lib/python3.12/importlib/__init__.py", line 90, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<frozen importlib._bootstrap>", line 1387, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1360, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1331, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 935, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 995, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/data/web/LIRbase/config/settings.py", line 120, in <module>
+    SOFT_DIR = BASE_DIR + "/soft/"
+               ~~~~~~~~~^~~~~~~~~~
+TypeError: unsupported operand type(s) for +: 'PosixPath' and 'str'
+Traceback (most recent call last):
+  File "/data/web/LIRbase/manage.py", line 22, in <module>
+    main()
+  File "/data/web/LIRbase/manage.py", line 18, in main
+    execute_from_command_line(sys.argv)
+  File "/data/web/LIRbase/venv/lib/python3.12/site-packages/django/core/management/__init__.py", line 443, in execute_from_command_line
+    utility.execute()
+  File "/data/web/LIRbase/venv/lib/python3.12/site-packages/django/core/management/__init__.py", line 383, in execute
+    settings.INSTALLED_APPS
+  File "/data/web/LIRbase/venv/lib/python3.12/site-packages/django/conf/__init__.py", line 75, in __getattr__
+    self._setup(name)
+  File "/data/web/LIRbase/venv/lib/python3.12/site-packages/django/conf/__init__.py", line 62, in _setup
+    self._wrapped = Settings(settings_module)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/data/web/LIRbase/venv/lib/python3.12/site-packages/django/conf/__init__.py", line 162, in __init__
+    mod = importlib.import_module(self.SETTINGS_MODULE)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/anaconda3/lib/python3.12/importlib/__init__.py", line 90, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<frozen importlib._bootstrap>", line 1387, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1360, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1331, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 935, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 995, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/data/web/LIRbase/config/settings.py", line 120, in <module>
+    SOFT_DIR = BASE_DIR + "/soft/"
+               ~~~~~~~~~^~~~~~~~~~
+TypeError: unsupported operand type(s) for +: 'PosixPath' and 'str'
+Traceback (most recent call last):
+  File "/data/web/LIRbase/manage.py", line 22, in <module>
+    main()
+  File "/data/web/LIRbase/manage.py", line 18, in main
+    execute_from_command_line(sys.argv)
+  File "/data/web/LIRbase/venv/lib/python3.12/site-packages/django/core/management/__init__.py", line 443, in execute_from_command_line
+    utility.execute()
+  File "/data/web/LIRbase/venv/lib/python3.12/site-packages/django/core/management/__init__.py", line 383, in execute
+    settings.INSTALLED_APPS
+  File "/data/web/LIRbase/venv/lib/python3.12/site-packages/django/conf/__init__.py", line 75, in __getattr__
+    self._setup(name)
+  File "/data/web/LIRbase/venv/lib/python3.12/site-packages/django/conf/__init__.py", line 62, in _setup
+    self._wrapped = Settings(settings_module)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/data/web/LIRbase/venv/lib/python3.12/site-packages/django/conf/__init__.py", line 162, in __init__
+    mod = importlib.import_module(self.SETTINGS_MODULE)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/anaconda3/lib/python3.12/importlib/__init__.py", line 90, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<frozen importlib._bootstrap>", line 1387, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1360, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1331, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 935, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 995, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/data/web/LIRbase/config/settings.py", line 120, in <module>
+    SOFT_DIR = BASE_DIR + "/soft/"
+               ~~~~~~~~~^~~~~~~~~~
+TypeError: unsupported operand type(s) for +: 'PosixPath' and 'str'
+Traceback (most recent call last):
+  File "/data/web/LIRbase/manage.py", line 22, in <module>
+    main()
+  File "/data/web/LIRbase/manage.py", line 18, in main
+    execute_from_command_line(sys.argv)
+  File "/data/web/LIRbase/venv/lib/python3.12/site-packages/django/core/management/__init__.py", line 443, in execute_from_command_line
+    utility.execute()
+  File "/data/web/LIRbase/venv/lib/python3.12/site-packages/django/core/management/__init__.py", line 383, in execute
+    settings.INSTALLED_APPS
+  File "/data/web/LIRbase/venv/lib/python3.12/site-packages/django/conf/__init__.py", line 75, in __getattr__
+    self._setup(name)
+  File "/data/web/LIRbase/venv/lib/python3.12/site-packages/django/conf/__init__.py", line 62, in _setup
+    self._wrapped = Settings(settings_module)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/data/web/LIRbase/venv/lib/python3.12/site-packages/django/conf/__init__.py", line 162, in __init__
+    mod = importlib.import_module(self.SETTINGS_MODULE)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/anaconda3/lib/python3.12/importlib/__init__.py", line 90, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<frozen importlib._bootstrap>", line 1387, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1360, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1331, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 935, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 995, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/data/web/LIRbase/config/settings.py", line 120, in <module>
+    SOFT_DIR = BASE_DIR + "/soft/"
+               ~~~~~~~~~^~~~~~~~~~
+TypeError: unsupported operand type(s) for +: 'PosixPath' and 'str'
+Traceback (most recent call last):
+  File "/data/web/LIRbase/manage.py", line 22, in <module>
+    main()
+  File "/data/web/LIRbase/manage.py", line 18, in main
+    execute_from_command_line(sys.argv)
+  File "/data/web/LIRbase/venv/lib/python3.12/site-packages/django/core/management/__init__.py", line 443, in execute_from_command_line
+    utility.execute()
+  File "/data/web/LIRbase/venv/lib/python3.12/site-packages/django/core/management/__init__.py", line 383, in execute
+    settings.INSTALLED_APPS
+  File "/data/web/LIRbase/venv/lib/python3.12/site-packages/django/conf/__init__.py", line 75, in __getattr__
+    self._setup(name)
+  File "/data/web/LIRbase/venv/lib/python3.12/site-packages/django/conf/__init__.py", line 62, in _setup
+    self._wrapped = Settings(settings_module)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/data/web/LIRbase/venv/lib/python3.12/site-packages/django/conf/__init__.py", line 162, in __init__
+    mod = importlib.import_module(self.SETTINGS_MODULE)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/anaconda3/lib/python3.12/importlib/__init__.py", line 90, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<frozen importlib._bootstrap>", line 1387, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1360, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1331, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 935, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 995, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/data/web/LIRbase/config/settings.py", line 120, in <module>
+    SOFT_DIR = BASE_DIR + "/soft/"
+               ~~~~~~~~~^~~~~~~~~~
+TypeError: unsupported operand type(s) for +: 'PosixPath' and 'str'
+Traceback (most recent call last):
+  File "/data/web/LIRbase/manage.py", line 22, in <module>
+    main()
+  File "/data/web/LIRbase/manage.py", line 18, in main
+    execute_from_command_line(sys.argv)
+  File "/data/web/LIRbase/venv/lib/python3.12/site-packages/django/core/management/__init__.py", line 443, in execute_from_command_line
+    utility.execute()
+  File "/data/web/LIRbase/venv/lib/python3.12/site-packages/django/core/management/__init__.py", line 383, in execute
+    settings.INSTALLED_APPS
+  File "/data/web/LIRbase/venv/lib/python3.12/site-packages/django/conf/__init__.py", line 75, in __getattr__
+    self._setup(name)
+  File "/data/web/LIRbase/venv/lib/python3.12/site-packages/django/conf/__init__.py", line 62, in _setup
+    self._wrapped = Settings(settings_module)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/data/web/LIRbase/venv/lib/python3.12/site-packages/django/conf/__init__.py", line 162, in __init__
+    mod = importlib.import_module(self.SETTINGS_MODULE)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/anaconda3/lib/python3.12/importlib/__init__.py", line 90, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<frozen importlib._bootstrap>", line 1387, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1360, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1331, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 935, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 995, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/data/web/LIRbase/config/settings.py", line 120, in <module>
+    SOFT_DIR = BASE_DIR + "/soft/"
+               ~~~~~~~~~^~~~~~~~~~
+TypeError: unsupported operand type(s) for +: 'PosixPath' and 'str'
+Traceback (most recent call last):
+  File "/data/web/LIRbase/manage.py", line 22, in <module>
+    main()
+  File "/data/web/LIRbase/manage.py", line 18, in main
+    execute_from_command_line(sys.argv)
+  File "/data/web/LIRbase/venv/lib/python3.12/site-packages/django/core/management/__init__.py", line 443, in execute_from_command_line
+    utility.execute()
+  File "/data/web/LIRbase/venv/lib/python3.12/site-packages/django/core/management/__init__.py", line 383, in execute
+    settings.INSTALLED_APPS
+  File "/data/web/LIRbase/venv/lib/python3.12/site-packages/django/conf/__init__.py", line 75, in __getattr__
+    self._setup(name)
+  File "/data/web/LIRbase/venv/lib/python3.12/site-packages/django/conf/__init__.py", line 62, in _setup
+    self._wrapped = Settings(settings_module)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/data/web/LIRbase/venv/lib/python3.12/site-packages/django/conf/__init__.py", line 162, in __init__
+    mod = importlib.import_module(self.SETTINGS_MODULE)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/anaconda3/lib/python3.12/importlib/__init__.py", line 90, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<frozen importlib._bootstrap>", line 1387, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1360, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1331, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 935, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 995, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/data/web/LIRbase/config/settings.py", line 121, in <module>
+    IRF_EXECUTABLE = SOFT_DIR + "IRF/bin/irf309.linux.exe"
+                     ~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~
+TypeError: unsupported operand type(s) for +: 'PosixPath' and 'str'
+Traceback (most recent call last):
+  File "/data/web/LIRbase/manage.py", line 22, in <module>
+    main()
+  File "/data/web/LIRbase/manage.py", line 18, in main
+    execute_from_command_line(sys.argv)
+  File "/data/web/LIRbase/venv/lib/python3.12/site-packages/django/core/management/__init__.py", line 443, in execute_from_command_line
+    utility.execute()
+  File "/data/web/LIRbase/venv/lib/python3.12/site-packages/django/core/management/__init__.py", line 383, in execute
+    settings.INSTALLED_APPS
+  File "/data/web/LIRbase/venv/lib/python3.12/site-packages/django/conf/__init__.py", line 75, in __getattr__
+    self._setup(name)
+  File "/data/web/LIRbase/venv/lib/python3.12/site-packages/django/conf/__init__.py", line 62, in _setup
+    self._wrapped = Settings(settings_module)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/data/web/LIRbase/venv/lib/python3.12/site-packages/django/conf/__init__.py", line 162, in __init__
+    mod = importlib.import_module(self.SETTINGS_MODULE)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/anaconda3/lib/python3.12/importlib/__init__.py", line 90, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<frozen importlib._bootstrap>", line 1387, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1360, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1331, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 935, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 995, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/data/web/LIRbase/config/settings.py", line 121, in <module>
+    IRF_EXECUTABLE = SOFT_DIR + "IRF/bin/irf309.linux.exe"
+                     ~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~
+TypeError: unsupported operand type(s) for +: 'PosixPath' and 'str'
+Traceback (most recent call last):
+  File "/data/web/LIRbase/manage.py", line 22, in <module>
+    main()
+  File "/data/web/LIRbase/manage.py", line 18, in main
+    execute_from_command_line(sys.argv)
+  File "/data/web/LIRbase/venv/lib/python3.12/site-packages/django/core/management/__init__.py", line 443, in execute_from_command_line
+    utility.execute()
+  File "/data/web/LIRbase/venv/lib/python3.12/site-packages/django/core/management/__init__.py", line 383, in execute
+    settings.INSTALLED_APPS
+  File "/data/web/LIRbase/venv/lib/python3.12/site-packages/django/conf/__init__.py", line 75, in __getattr__
+    self._setup(name)
+  File "/data/web/LIRbase/venv/lib/python3.12/site-packages/django/conf/__init__.py", line 62, in _setup
+    self._wrapped = Settings(settings_module)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/data/web/LIRbase/venv/lib/python3.12/site-packages/django/conf/__init__.py", line 162, in __init__
+    mod = importlib.import_module(self.SETTINGS_MODULE)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/anaconda3/lib/python3.12/importlib/__init__.py", line 90, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<frozen importlib._bootstrap>", line 1387, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1360, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1331, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 935, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 995, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/data/web/LIRbase/config/settings.py", line 121, in <module>
+    IRF_EXECUTABLE = SOFT_DIR + "IRF/bin/irf309.linux.exe"
+                     ~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~
+TypeError: unsupported operand type(s) for +: 'PosixPath' and 'str'
+Watching for file changes with StatReloader
+/data/web/LIRbase/lir/views.py changed, reloading.
+Performing system checks...
+
+System check identified no issues (0 silenced).
+April 11, 2026 - 02:40:52 AM
+Django version 6.0.4, using settings 'config.settings'
+Starting development server at http://0.0.0.0:8001/
+Quit the server with CONTROL-C.
+
+WARNING: This is a development server. Do not use it in a production setting. Use a production WSGI or ASGI server instead.
+For more information on production servers see: https://docs.djangoproject.com/en/6.0/howto/deployment/
+Watching for file changes with StatReloader
+/data/web/LIRbase/lir/views.py changed, reloading.
+Performing system checks...
+
+System check identified no issues (0 silenced).
+April 11, 2026 - 03:40:09 AM
+Django version 6.0.4, using settings 'config.settings'
+Starting development server at http://0.0.0.0:8001/
+Quit the server with CONTROL-C.
+
+WARNING: This is a development server. Do not use it in a production setting. Use a production WSGI or ASGI server instead.
+For more information on production servers see: https://docs.djangoproject.com/en/6.0/howto/deployment/
+Watching for file changes with StatReloader
+/data/web/LIRbase/lir/views.py changed, reloading.
+Performing system checks...
+
+System check identified no issues (0 silenced).
+April 11, 2026 - 03:41:06 AM
+Django version 6.0.4, using settings 'config.settings'
+Starting development server at http://0.0.0.0:8001/
+Quit the server with CONTROL-C.
+
+WARNING: This is a development server. Do not use it in a production setting. Use a production WSGI or ASGI server instead.
+For more information on production servers see: https://docs.djangoproject.com/en/6.0/howto/deployment/
+Watching for file changes with StatReloader
+/data/web/LIRbase/lir/services/blast.py changed, reloading.
+Performing system checks...
+
+System check identified no issues (0 silenced).
+April 11, 2026 - 03:42:06 AM
+Django version 6.0.4, using settings 'config.settings'
+Starting development server at http://0.0.0.0:8001/
+Quit the server with CONTROL-C.
+
+WARNING: This is a development server. Do not use it in a production setting. Use a production WSGI or ASGI server instead.
+For more information on production servers see: https://docs.djangoproject.com/en/6.0/howto/deployment/
+Watching for file changes with StatReloader
+/data/web/LIRbase/lir/services/blast.py changed, reloading.
+Performing system checks...
+
+System check identified no issues (0 silenced).
+April 11, 2026 - 03:51:43 AM
+Django version 6.0.4, using settings 'config.settings'
+Starting development server at http://0.0.0.0:8001/
+Quit the server with CONTROL-C.
+
+WARNING: This is a development server. Do not use it in a production setting. Use a production WSGI or ASGI server instead.
+For more information on production servers see: https://docs.djangoproject.com/en/6.0/howto/deployment/
+Watching for file changes with StatReloader
+/data/web/LIRbase/lir/views.py changed, reloading.
+Performing system checks...
+
+System check identified no issues (0 silenced).
+April 11, 2026 - 03:52:04 AM
+Django version 6.0.4, using settings 'config.settings'
+Starting development server at http://0.0.0.0:8001/
+Quit the server with CONTROL-C.
+
+WARNING: This is a development server. Do not use it in a production setting. Use a production WSGI or ASGI server instead.
+For more information on production servers see: https://docs.djangoproject.com/en/6.0/howto/deployment/
+Watching for file changes with StatReloader
+/data/web/LIRbase/config/settings.py changed, reloading.
+Performing system checks...
+
+System check identified no issues (0 silenced).
+April 11, 2026 - 06:51:58 AM
+Django version 6.0.4, using settings 'config.settings'
+Starting development server at http://0.0.0.0:8001/
+Quit the server with CONTROL-C.
+
+WARNING: This is a development server. Do not use it in a production setting. Use a production WSGI or ASGI server instead.
+For more information on production servers see: https://docs.djangoproject.com/en/6.0/howto/deployment/
+Watching for file changes with StatReloader
+Watching for file changes with StatReloader
+cffi mode is CFFI_MODE.ANY
+R home found: /usr/lib/R
+R library path: /usr/lib/R/lib:/usr/lib/x86_64-linux-gnu:/usr/lib/jvm/default-java/lib/server
+LD_LIBRARY_PATH: /usr/lib/R/lib:/usr/lib/x86_64-linux-gnu:/usr/lib/jvm/default-java/lib/server
+Default options to initialize R: rpy2, --quiet, --no-save
+R is already initialized. No need to initialize.
+/data/web/LIRbase/config/settings.py changed, reloading.
+/data/web/LIRbase/config/settings.py changed, reloading.
+Performing system checks...
+
+System check identified no issues (0 silenced).
+April 11, 2026 - 06:57:11 AM
+Django version 6.0.4, using settings 'config.settings'
+Starting development server at http://0.0.0.0:8001/
+Quit the server with CONTROL-C.
+
+WARNING: This is a development server. Do not use it in a production setting. Use a production WSGI or ASGI server instead.
+For more information on production servers see: https://docs.djangoproject.com/en/6.0/howto/deployment/
+Watching for file changes with StatReloader
+Watching for file changes with StatReloader
+cffi mode is CFFI_MODE.ANY
+R home found: /usr/lib/R
+R library path: /usr/lib/R/lib:/usr/lib/x86_64-linux-gnu:/usr/lib/jvm/default-java/lib/server
+LD_LIBRARY_PATH: /usr/lib/R/lib:/usr/lib/x86_64-linux-gnu:/usr/lib/jvm/default-java/lib/server
+Default options to initialize R: rpy2, --quiet, --no-save
+R is already initialized. No need to initialize.
+/data/web/LIRbase/config/settings.py changed, reloading.
+/data/web/LIRbase/config/settings.py changed, reloading.
+Performing system checks...
+
+System check identified no issues (0 silenced).
+April 11, 2026 - 06:57:56 AM
+Django version 6.0.4, using settings 'config.settings'
+Starting development server at http://0.0.0.0:8001/
+Quit the server with CONTROL-C.
+
+WARNING: This is a development server. Do not use it in a production setting. Use a production WSGI or ASGI server instead.
+For more information on production servers see: https://docs.djangoproject.com/en/6.0/howto/deployment/
+Traceback (most recent call last):
+  File "/data/web/LIRbase/manage.py", line 22, in <module>
+    main()
+  File "/data/web/LIRbase/manage.py", line 18, in main
+    execute_from_command_line(sys.argv)
+  File "/data/web/LIRbase/venv/lib/python3.12/site-packages/django/core/management/__init__.py", line 443, in execute_from_command_line
+    utility.execute()
+  File "/data/web/LIRbase/venv/lib/python3.12/site-packages/django/core/management/__init__.py", line 383, in execute
+    settings.INSTALLED_APPS
+  File "/data/web/LIRbase/venv/lib/python3.12/site-packages/django/conf/__init__.py", line 75, in __getattr__
+    self._setup(name)
+  File "/data/web/LIRbase/venv/lib/python3.12/site-packages/django/conf/__init__.py", line 62, in _setup
+    self._wrapped = Settings(settings_module)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/data/web/LIRbase/venv/lib/python3.12/site-packages/django/conf/__init__.py", line 162, in __init__
+    mod = importlib.import_module(self.SETTINGS_MODULE)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/anaconda3/lib/python3.12/importlib/__init__.py", line 90, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<frozen importlib._bootstrap>", line 1387, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1360, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1331, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 935, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 995, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/data/web/LIRbase/config/settings.py", line 145, in <module>
+    'filename': os.path.join(BASE_DIR, 'django.log'),
+                ^^
+NameError: name 'os' is not defined. Did you forget to import 'os'?
+Traceback (most recent call last):
+  File "/data/web/LIRbase/manage.py", line 22, in <module>
+    main()
+  File "/data/web/LIRbase/manage.py", line 18, in main
+    execute_from_command_line(sys.argv)
+  File "/data/web/LIRbase/venv/lib/python3.12/site-packages/django/core/management/__init__.py", line 443, in execute_from_command_line
+    utility.execute()
+  File "/data/web/LIRbase/venv/lib/python3.12/site-packages/django/core/management/__init__.py", line 383, in execute
+    settings.INSTALLED_APPS
+  File "/data/web/LIRbase/venv/lib/python3.12/site-packages/django/conf/__init__.py", line 75, in __getattr__
+    self._setup(name)
+  File "/data/web/LIRbase/venv/lib/python3.12/site-packages/django/conf/__init__.py", line 62, in _setup
+    self._wrapped = Settings(settings_module)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/data/web/LIRbase/venv/lib/python3.12/site-packages/django/conf/__init__.py", line 162, in __init__
+    mod = importlib.import_module(self.SETTINGS_MODULE)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/anaconda3/lib/python3.12/importlib/__init__.py", line 90, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<frozen importlib._bootstrap>", line 1387, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1360, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1331, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 935, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 995, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/data/web/LIRbase/config/settings.py", line 145, in <module>
+    'filename': os.path.join(BASE_DIR, 'django.log'),
+                ^^
+NameError: name 'os' is not defined. Did you forget to import 'os'?
+Traceback (most recent call last):
+  File "/data/web/LIRbase/manage.py", line 22, in <module>
+    main()
+  File "/data/web/LIRbase/manage.py", line 18, in main
+    execute_from_command_line(sys.argv)
+  File "/data/web/LIRbase/venv/lib/python3.12/site-packages/django/core/management/__init__.py", line 443, in execute_from_command_line
+    utility.execute()
+  File "/data/web/LIRbase/venv/lib/python3.12/site-packages/django/core/management/__init__.py", line 383, in execute
+    settings.INSTALLED_APPS
+  File "/data/web/LIRbase/venv/lib/python3.12/site-packages/django/conf/__init__.py", line 75, in __getattr__
+    self._setup(name)
+  File "/data/web/LIRbase/venv/lib/python3.12/site-packages/django/conf/__init__.py", line 62, in _setup
+    self._wrapped = Settings(settings_module)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/data/web/LIRbase/venv/lib/python3.12/site-packages/django/conf/__init__.py", line 162, in __init__
+    mod = importlib.import_module(self.SETTINGS_MODULE)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/anaconda3/lib/python3.12/importlib/__init__.py", line 90, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<frozen importlib._bootstrap>", line 1387, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1360, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1331, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 935, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 995, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/data/web/LIRbase/config/settings.py", line 145, in <module>
+    'filename': os.path.join(BASE_DIR, 'django.log'),
+                ^^
+NameError: name 'os' is not defined. Did you forget to import 'os'?
+Traceback (most recent call last):
+  File "/data/web/LIRbase/manage.py", line 22, in <module>
+    main()
+  File "/data/web/LIRbase/manage.py", line 18, in main
+    execute_from_command_line(sys.argv)
+  File "/data/web/LIRbase/venv/lib/python3.12/site-packages/django/core/management/__init__.py", line 443, in execute_from_command_line
+    utility.execute()
+  File "/data/web/LIRbase/venv/lib/python3.12/site-packages/django/core/management/__init__.py", line 383, in execute
+    settings.INSTALLED_APPS
+  File "/data/web/LIRbase/venv/lib/python3.12/site-packages/django/conf/__init__.py", line 75, in __getattr__
+    self._setup(name)
+  File "/data/web/LIRbase/venv/lib/python3.12/site-packages/django/conf/__init__.py", line 62, in _setup
+    self._wrapped = Settings(settings_module)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/data/web/LIRbase/venv/lib/python3.12/site-packages/django/conf/__init__.py", line 162, in __init__
+    mod = importlib.import_module(self.SETTINGS_MODULE)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/anaconda3/lib/python3.12/importlib/__init__.py", line 90, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<frozen importlib._bootstrap>", line 1387, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1360, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1331, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 935, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 995, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/data/web/LIRbase/config/settings.py", line 145, in <module>
+    'filename': os.path.join(BASE_DIR, 'django.log'),
+                ^^
+NameError: name 'os' is not defined. Did you forget to import 'os'?
+Traceback (most recent call last):
+  File "/data/web/LIRbase/manage.py", line 22, in <module>
+    main()
+  File "/data/web/LIRbase/manage.py", line 18, in main
+    execute_from_command_line(sys.argv)
+  File "/data/web/LIRbase/venv/lib/python3.12/site-packages/django/core/management/__init__.py", line 443, in execute_from_command_line
+    utility.execute()
+  File "/data/web/LIRbase/venv/lib/python3.12/site-packages/django/core/management/__init__.py", line 383, in execute
+    settings.INSTALLED_APPS
+  File "/data/web/LIRbase/venv/lib/python3.12/site-packages/django/conf/__init__.py", line 75, in __getattr__
+    self._setup(name)
+  File "/data/web/LIRbase/venv/lib/python3.12/site-packages/django/conf/__init__.py", line 62, in _setup
+    self._wrapped = Settings(settings_module)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/data/web/LIRbase/venv/lib/python3.12/site-packages/django/conf/__init__.py", line 162, in __init__
+    mod = importlib.import_module(self.SETTINGS_MODULE)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/anaconda3/lib/python3.12/importlib/__init__.py", line 90, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<frozen importlib._bootstrap>", line 1387, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1360, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1331, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 935, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 995, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/data/web/LIRbase/config/settings.py", line 145, in <module>
+    'filename': os.path.join(BASE_DIR, 'django.log'),
+                ^^
+NameError: name 'os' is not defined. Did you forget to import 'os'?
+Traceback (most recent call last):
+  File "/data/web/LIRbase/manage.py", line 22, in <module>
+    main()
+  File "/data/web/LIRbase/manage.py", line 18, in main
+    execute_from_command_line(sys.argv)
+  File "/data/web/LIRbase/venv/lib/python3.12/site-packages/django/core/management/__init__.py", line 443, in execute_from_command_line
+    utility.execute()
+  File "/data/web/LIRbase/venv/lib/python3.12/site-packages/django/core/management/__init__.py", line 383, in execute
+    settings.INSTALLED_APPS
+  File "/data/web/LIRbase/venv/lib/python3.12/site-packages/django/conf/__init__.py", line 75, in __getattr__
+    self._setup(name)
+  File "/data/web/LIRbase/venv/lib/python3.12/site-packages/django/conf/__init__.py", line 62, in _setup
+    self._wrapped = Settings(settings_module)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/data/web/LIRbase/venv/lib/python3.12/site-packages/django/conf/__init__.py", line 162, in __init__
+    mod = importlib.import_module(self.SETTINGS_MODULE)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/anaconda3/lib/python3.12/importlib/__init__.py", line 90, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<frozen importlib._bootstrap>", line 1387, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1360, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1331, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 935, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 995, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/data/web/LIRbase/config/settings.py", line 145, in <module>
+    'filename': os.path.join(BASE_DIR, 'django.log'),
+                ^^
+NameError: name 'os' is not defined. Did you forget to import 'os'?
+Traceback (most recent call last):
+  File "/data/web/LIRbase/manage.py", line 22, in <module>
+    main()
+  File "/data/web/LIRbase/manage.py", line 18, in main
+    execute_from_command_line(sys.argv)
+  File "/data/web/LIRbase/venv/lib/python3.12/site-packages/django/core/management/__init__.py", line 443, in execute_from_command_line
+    utility.execute()
+  File "/data/web/LIRbase/venv/lib/python3.12/site-packages/django/core/management/__init__.py", line 383, in execute
+    settings.INSTALLED_APPS
+  File "/data/web/LIRbase/venv/lib/python3.12/site-packages/django/conf/__init__.py", line 75, in __getattr__
+    self._setup(name)
+  File "/data/web/LIRbase/venv/lib/python3.12/site-packages/django/conf/__init__.py", line 62, in _setup
+    self._wrapped = Settings(settings_module)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/data/web/LIRbase/venv/lib/python3.12/site-packages/django/conf/__init__.py", line 162, in __init__
+    mod = importlib.import_module(self.SETTINGS_MODULE)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/anaconda3/lib/python3.12/importlib/__init__.py", line 90, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<frozen importlib._bootstrap>", line 1387, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1360, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1331, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 935, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 995, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/data/web/LIRbase/config/settings.py", line 145, in <module>
+    'filename': os.path.join(BASE_DIR, 'django.log'),
+                ^^
+NameError: name 'os' is not defined. Did you forget to import 'os'?
+Traceback (most recent call last):
+  File "/data/web/LIRbase/manage.py", line 22, in <module>
+    main()
+  File "/data/web/LIRbase/manage.py", line 18, in main
+    execute_from_command_line(sys.argv)
+  File "/data/web/LIRbase/venv/lib/python3.12/site-packages/django/core/management/__init__.py", line 443, in execute_from_command_line
+    utility.execute()
+  File "/data/web/LIRbase/venv/lib/python3.12/site-packages/django/core/management/__init__.py", line 383, in execute
+    settings.INSTALLED_APPS
+  File "/data/web/LIRbase/venv/lib/python3.12/site-packages/django/conf/__init__.py", line 75, in __getattr__
+    self._setup(name)
+  File "/data/web/LIRbase/venv/lib/python3.12/site-packages/django/conf/__init__.py", line 62, in _setup
+    self._wrapped = Settings(settings_module)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/data/web/LIRbase/venv/lib/python3.12/site-packages/django/conf/__init__.py", line 162, in __init__
+    mod = importlib.import_module(self.SETTINGS_MODULE)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/anaconda3/lib/python3.12/importlib/__init__.py", line 90, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<frozen importlib._bootstrap>", line 1387, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1360, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1331, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 935, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 995, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/data/web/LIRbase/config/settings.py", line 145, in <module>
+    'filename': os.path.join(BASE_DIR, 'django.log'),
+                ^^
+NameError: name 'os' is not defined. Did you forget to import 'os'?
+Watching for file changes with StatReloader
+/data/web/LIRbase/lir/views.py changed, reloading.
+Performing system checks...
+
+System check identified no issues (0 silenced).
+April 11, 2026 - 07:14:06 AM
+Django version 6.0.4, using settings 'config.settings'
+Starting development server at http://0.0.0.0:8001/
+Quit the server with CONTROL-C.
+
+WARNING: This is a development server. Do not use it in a production setting. Use a production WSGI or ASGI server instead.
+For more information on production servers see: https://docs.djangoproject.com/en/6.0/howto/deployment/
+Watching for file changes with StatReloader
+/data/web/LIRbase/lir/views.py changed, reloading.
+Performing system checks...
+
+System check identified no issues (0 silenced).
+April 11, 2026 - 07:15:29 AM
+Django version 6.0.4, using settings 'config.settings'
+Starting development server at http://0.0.0.0:8001/
+Quit the server with CONTROL-C.
+
+WARNING: This is a development server. Do not use it in a production setting. Use a production WSGI or ASGI server instead.
+For more information on production servers see: https://docs.djangoproject.com/en/6.0/howto/deployment/
+Watching for file changes with StatReloader
+/data/web/LIRbase/lir/services/annotate.py changed, reloading.
+Performing system checks...
+
+System check identified no issues (0 silenced).
+April 11, 2026 - 07:52:22 AM
+Django version 6.0.4, using settings 'config.settings'
+Starting development server at http://0.0.0.0:8001/
+Quit the server with CONTROL-C.
+
+WARNING: This is a development server. Do not use it in a production setting. Use a production WSGI or ASGI server instead.
+For more information on production servers see: https://docs.djangoproject.com/en/6.0/howto/deployment/
+Watching for file changes with StatReloader
+/data/web/LIRbase/lir/services/annotate.py changed, reloading.
+Performing system checks...
+
+System check identified no issues (0 silenced).
+April 11, 2026 - 07:56:03 AM
+Django version 6.0.4, using settings 'config.settings'
+Starting development server at http://0.0.0.0:8001/
+Quit the server with CONTROL-C.
+
+WARNING: This is a development server. Do not use it in a production setting. Use a production WSGI or ASGI server instead.
+For more information on production servers see: https://docs.djangoproject.com/en/6.0/howto/deployment/
+Watching for file changes with StatReloader
+/data/web/LIRbase/lir/services/annotate.py changed, reloading.
+Performing system checks...
+
+System check identified no issues (0 silenced).
+April 11, 2026 - 07:57:27 AM
+Django version 6.0.4, using settings 'config.settings'
+Starting development server at http://0.0.0.0:8001/
+Quit the server with CONTROL-C.
+
+WARNING: This is a development server. Do not use it in a production setting. Use a production WSGI or ASGI server instead.
+For more information on production servers see: https://docs.djangoproject.com/en/6.0/howto/deployment/
+Watching for file changes with StatReloader
+/data/web/LIRbase/lir/services/annotate.py changed, reloading.
+Performing system checks...
+
+System check identified no issues (0 silenced).
+April 11, 2026 - 08:01:05 AM
+Django version 6.0.4, using settings 'config.settings'
+Starting development server at http://0.0.0.0:8001/
+Quit the server with CONTROL-C.
+
+WARNING: This is a development server. Do not use it in a production setting. Use a production WSGI or ASGI server instead.
+For more information on production servers see: https://docs.djangoproject.com/en/6.0/howto/deployment/
+Watching for file changes with StatReloader
+/data/web/LIRbase/lir/services/annotate.py changed, reloading.
+Performing system checks...
+
+System check identified no issues (0 silenced).
+April 11, 2026 - 08:03:46 AM
+Django version 6.0.4, using settings 'config.settings'
+Starting development server at http://0.0.0.0:8001/
+Quit the server with CONTROL-C.
+
+WARNING: This is a development server. Do not use it in a production setting. Use a production WSGI or ASGI server instead.
+For more information on production servers see: https://docs.djangoproject.com/en/6.0/howto/deployment/
+Watching for file changes with StatReloader
+/data/web/LIRbase/lir/services/annotate.py changed, reloading.
+Performing system checks...
+
+System check identified no issues (0 silenced).
+April 11, 2026 - 08:04:02 AM
+Django version 6.0.4, using settings 'config.settings'
+Starting development server at http://0.0.0.0:8001/
+Quit the server with CONTROL-C.
+
+WARNING: This is a development server. Do not use it in a production setting. Use a production WSGI or ASGI server instead.
+For more information on production servers see: https://docs.djangoproject.com/en/6.0/howto/deployment/
+Watching for file changes with StatReloader
+/data/web/LIRbase/lir/services/annotate.py changed, reloading.
+Performing system checks...
+
+System check identified no issues (0 silenced).
+April 11, 2026 - 08:05:01 AM
+Django version 6.0.4, using settings 'config.settings'
+Starting development server at http://0.0.0.0:8001/
+Quit the server with CONTROL-C.
+
+WARNING: This is a development server. Do not use it in a production setting. Use a production WSGI or ASGI server instead.
+For more information on production servers see: https://docs.djangoproject.com/en/6.0/howto/deployment/
+Watching for file changes with StatReloader
+/data/web/LIRbase/lir/services/annotate.py changed, reloading.
+Performing system checks...
+
+System check identified no issues (0 silenced).
+April 11, 2026 - 08:05:34 AM
+Django version 6.0.4, using settings 'config.settings'
+Starting development server at http://0.0.0.0:8001/
+Quit the server with CONTROL-C.
+
+WARNING: This is a development server. Do not use it in a production setting. Use a production WSGI or ASGI server instead.
+For more information on production servers see: https://docs.djangoproject.com/en/6.0/howto/deployment/
+Watching for file changes with StatReloader
+/data/web/LIRbase/lir/services/annotate.py changed, reloading.
+Performing system checks...
+
+System check identified no issues (0 silenced).
+April 11, 2026 - 08:06:33 AM
+Django version 6.0.4, using settings 'config.settings'
+Starting development server at http://0.0.0.0:8001/
+Quit the server with CONTROL-C.
+
+WARNING: This is a development server. Do not use it in a production setting. Use a production WSGI or ASGI server instead.
+For more information on production servers see: https://docs.djangoproject.com/en/6.0/howto/deployment/
+Watching for file changes with StatReloader
+/data/web/LIRbase/lir/services/annotate.py changed, reloading.
+Performing system checks...
+
+System check identified no issues (0 silenced).
+April 11, 2026 - 08:07:13 AM
+Django version 6.0.4, using settings 'config.settings'
+Starting development server at http://0.0.0.0:8001/
+Quit the server with CONTROL-C.
+
+WARNING: This is a development server. Do not use it in a production setting. Use a production WSGI or ASGI server instead.
+For more information on production servers see: https://docs.djangoproject.com/en/6.0/howto/deployment/
+Watching for file changes with StatReloader
+/data/web/LIRbase/lir/services/annotate.py changed, reloading.
+Performing system checks...
+
+System check identified no issues (0 silenced).
+April 11, 2026 - 08:07:41 AM
+Django version 6.0.4, using settings 'config.settings'
+Starting development server at http://0.0.0.0:8001/
+Quit the server with CONTROL-C.
+
+WARNING: This is a development server. Do not use it in a production setting. Use a production WSGI or ASGI server instead.
+For more information on production servers see: https://docs.djangoproject.com/en/6.0/howto/deployment/
+Watching for file changes with StatReloader
+/data/web/LIRbase/lir/views.py changed, reloading.
+Performing system checks...
+
+System check identified no issues (0 silenced).
+April 11, 2026 - 08:11:25 AM
+Django version 6.0.4, using settings 'config.settings'
+Starting development server at http://0.0.0.0:8001/
+Quit the server with CONTROL-C.
+
+WARNING: This is a development server. Do not use it in a production setting. Use a production WSGI or ASGI server instead.
+For more information on production servers see: https://docs.djangoproject.com/en/6.0/howto/deployment/
+Watching for file changes with StatReloader
+/data/web/LIRbase/lir/views.py changed, reloading.
+Performing system checks...
+
+System check identified no issues (0 silenced).
+April 11, 2026 - 08:22:34 AM
+Django version 6.0.4, using settings 'config.settings'
+Starting development server at http://0.0.0.0:8001/
+Quit the server with CONTROL-C.
+
+WARNING: This is a development server. Do not use it in a production setting. Use a production WSGI or ASGI server instead.
+For more information on production servers see: https://docs.djangoproject.com/en/6.0/howto/deployment/
+Watching for file changes with StatReloader
+/data/web/LIRbase/lir/views.py changed, reloading.
+Performing system checks...
+
+System check identified no issues (0 silenced).
+April 11, 2026 - 08:22:49 AM
+Django version 6.0.4, using settings 'config.settings'
+Starting development server at http://0.0.0.0:8001/
+Quit the server with CONTROL-C.
+
+WARNING: This is a development server. Do not use it in a production setting. Use a production WSGI or ASGI server instead.
+For more information on production servers see: https://docs.djangoproject.com/en/6.0/howto/deployment/
+Watching for file changes with StatReloader
+/data/web/LIRbase/lir/views.py changed, reloading.
+Performing system checks...
+
+System check identified no issues (0 silenced).
+April 11, 2026 - 08:31:58 AM
+Django version 6.0.4, using settings 'config.settings'
+Starting development server at http://0.0.0.0:8001/
+Quit the server with CONTROL-C.
+
+WARNING: This is a development server. Do not use it in a production setting. Use a production WSGI or ASGI server instead.
+For more information on production servers see: https://docs.djangoproject.com/en/6.0/howto/deployment/
+Watching for file changes with StatReloader
+/data/web/LIRbase/lir/views.py changed, reloading.
+Performing system checks...
+
+System check identified no issues (0 silenced).
+April 11, 2026 - 08:32:50 AM
+Django version 6.0.4, using settings 'config.settings'
+Starting development server at http://0.0.0.0:8001/
+Quit the server with CONTROL-C.
+
+WARNING: This is a development server. Do not use it in a production setting. Use a production WSGI or ASGI server instead.
+For more information on production servers see: https://docs.djangoproject.com/en/6.0/howto/deployment/
+Watching for file changes with StatReloader
+/data/web/LIRbase/lir/services/annotate.py changed, reloading.
+Performing system checks...
+
+System check identified no issues (0 silenced).
+April 11, 2026 - 08:34:02 AM
+Django version 6.0.4, using settings 'config.settings'
+Starting development server at http://0.0.0.0:8001/
+Quit the server with CONTROL-C.
+
+WARNING: This is a development server. Do not use it in a production setting. Use a production WSGI or ASGI server instead.
+For more information on production servers see: https://docs.djangoproject.com/en/6.0/howto/deployment/
+Watching for file changes with StatReloader
+/data/web/LIRbase/lir/services/annotate.py changed, reloading.
+Performing system checks...
+
+System check identified no issues (0 silenced).
+April 11, 2026 - 08:34:39 AM
+Django version 6.0.4, using settings 'config.settings'
+Starting development server at http://0.0.0.0:8001/
+Quit the server with CONTROL-C.
+
+WARNING: This is a development server. Do not use it in a production setting. Use a production WSGI or ASGI server instead.
+For more information on production servers see: https://docs.djangoproject.com/en/6.0/howto/deployment/
+Watching for file changes with StatReloader
+/data/web/LIRbase/lir/services/annotate.py changed, reloading.
+Performing system checks...
+
+System check identified no issues (0 silenced).
+April 11, 2026 - 08:36:16 AM
+Django version 6.0.4, using settings 'config.settings'
+Starting development server at http://0.0.0.0:8001/
+Quit the server with CONTROL-C.
+
+WARNING: This is a development server. Do not use it in a production setting. Use a production WSGI or ASGI server instead.
+For more information on production servers see: https://docs.djangoproject.com/en/6.0/howto/deployment/
+Watching for file changes with StatReloader
+/data/web/LIRbase/lir/services/annotate.py changed, reloading.
+Performing system checks...
+
+System check identified no issues (0 silenced).
+April 11, 2026 - 08:38:31 AM
+Django version 6.0.4, using settings 'config.settings'
+Starting development server at http://0.0.0.0:8001/
+Quit the server with CONTROL-C.
+
+WARNING: This is a development server. Do not use it in a production setting. Use a production WSGI or ASGI server instead.
+For more information on production servers see: https://docs.djangoproject.com/en/6.0/howto/deployment/
+Watching for file changes with StatReloader
+/data/web/LIRbase/lir/views.py changed, reloading.
+Performing system checks...
+
+System check identified no issues (0 silenced).
+April 11, 2026 - 08:39:13 AM
+Django version 6.0.4, using settings 'config.settings'
+Starting development server at http://0.0.0.0:8001/
+Quit the server with CONTROL-C.
+
+WARNING: This is a development server. Do not use it in a production setting. Use a production WSGI or ASGI server instead.
+For more information on production servers see: https://docs.djangoproject.com/en/6.0/howto/deployment/
+Watching for file changes with StatReloader
+Watching for file changes with StatReloader
+[14/Apr/2026 01:48:48] "GET / HTTP/1.1" 200 5044
+/data/web/LIRbase/lir/views.py changed, reloading.
+Performing system checks...
+
+System check identified no issues (0 silenced).
+April 13, 2026 - 09:12:02 AM
+Django version 6.0.4, using settings 'config.settings'
+Starting development server at http://0.0.0.0:8001/
+Quit the server with CONTROL-C.
+
+WARNING: This is a development server. Do not use it in a production setting. Use a production WSGI or ASGI server instead.
+For more information on production servers see: https://docs.djangoproject.com/en/6.0/howto/deployment/
+Watching for file changes with StatReloader
+/data/web/LIRbase/lir/views.py changed, reloading.
+Performing system checks...
+
+System check identified no issues (0 silenced).
+April 14, 2026 - 01:54:05 AM
+Django version 6.0.4, using settings 'config.settings'
+Starting development server at http://0.0.0.0:8001/
+Quit the server with CONTROL-C.
+
+WARNING: This is a development server. Do not use it in a production setting. Use a production WSGI or ASGI server instead.
+For more information on production servers see: https://docs.djangoproject.com/en/6.0/howto/deployment/
+Watching for file changes with StatReloader
+/data/web/LIRbase/lir/views.py changed, reloading.
+Performing system checks...
+
+System check identified no issues (0 silenced).
+April 14, 2026 - 01:56:46 AM
+Django version 6.0.4, using settings 'config.settings'
+Starting development server at http://0.0.0.0:8001/
+Quit the server with CONTROL-C.
+
+WARNING: This is a development server. Do not use it in a production setting. Use a production WSGI or ASGI server instead.
+For more information on production servers see: https://docs.djangoproject.com/en/6.0/howto/deployment/
+Watching for file changes with StatReloader
+/data/web/LIRbase/lir/services/annotate.py changed, reloading.
+Performing system checks...
+
+System check identified no issues (0 silenced).
+April 14, 2026 - 01:57:20 AM
+Django version 6.0.4, using settings 'config.settings'
+Starting development server at http://0.0.0.0:8001/
+Quit the server with CONTROL-C.
+
+WARNING: This is a development server. Do not use it in a production setting. Use a production WSGI or ASGI server instead.
+For more information on production servers see: https://docs.djangoproject.com/en/6.0/howto/deployment/
+Watching for file changes with StatReloader
+/data/web/LIRbase/lir/views.py changed, reloading.
+Performing system checks...
+
+System check identified no issues (0 silenced).
+April 14, 2026 - 02:03:36 AM
+Django version 6.0.4, using settings 'config.settings'
+Starting development server at http://0.0.0.0:8001/
+Quit the server with CONTROL-C.
+
+WARNING: This is a development server. Do not use it in a production setting. Use a production WSGI or ASGI server instead.
+For more information on production servers see: https://docs.djangoproject.com/en/6.0/howto/deployment/
+Watching for file changes with StatReloader
+/data/web/LIRbase/lir/views.py changed, reloading.
+Performing system checks...
+
+System check identified no issues (0 silenced).
+April 14, 2026 - 02:09:21 AM
+Django version 6.0.4, using settings 'config.settings'
+Starting development server at http://0.0.0.0:8001/
+Quit the server with CONTROL-C.
+
+WARNING: This is a development server. Do not use it in a production setting. Use a production WSGI or ASGI server instead.
+For more information on production servers see: https://docs.djangoproject.com/en/6.0/howto/deployment/
+Watching for file changes with StatReloader
+/data/web/LIRbase/lir/views.py changed, reloading.
+Performing system checks...
+
+System check identified no issues (0 silenced).
+April 14, 2026 - 02:09:23 AM
+Django version 6.0.4, using settings 'config.settings'
+Starting development server at http://0.0.0.0:8001/
+Quit the server with CONTROL-C.
+
+WARNING: This is a development server. Do not use it in a production setting. Use a production WSGI or ASGI server instead.
+For more information on production servers see: https://docs.djangoproject.com/en/6.0/howto/deployment/
+Watching for file changes with StatReloader
+[14/Apr/2026 02:10:23] "GET / HTTP/1.1" 200 5044
+[14/Apr/2026 02:10:25] "GET /annotate/ HTTP/1.1" 200 6963
+[14/Apr/2026 02:10:28] "POST /annotate/ HTTP/1.1" 200 27963
+INFO 写入 IRF 输入文件: /data/tmp/tmppewzy1h7/input.fa
+INFO 临时目录文件: ['input.fa', 'input.fa.2.3.5.80.10.40.100000.50000.dat', 'input.fa.2.3.5.80.10.40.100000.50000.summary.html', 'input.fa.s1.2.3.5.80.10.40.100000.50000.1.html', 'input.fa.s1.2.3.5.80.10.40.100000.50000.1.txt.html', 'input.fa.s2.2.3.5.80.10.40.100000.50000.1.html', 'input.fa.s2.2.3.5.80.10.40.100000.50000.1.txt.html']
+INFO dat 文件: /data/tmp/tmppewzy1h7/input.fa.2.3.5.80.10.40.100000.50000.dat
+[14/Apr/2026 02:10:30] "POST /annotate/ HTTP/1.1" 200 104410
+[14/Apr/2026 02:32:22] "GET /annotate/ HTTP/1.1" 200 6963
+[14/Apr/2026 02:32:26] "POST /annotate/ HTTP/1.1" 200 27963
+INFO 写入 IRF 输入文件: /data/tmp/tmp0ejnk367/input.fa
+INFO 临时目录文件: ['input.fa', 'input.fa.2.3.5.80.10.40.100000.50000.dat', 'input.fa.2.3.5.80.10.40.100000.50000.summary.html', 'input.fa.s1.2.3.5.80.10.40.100000.50000.1.html', 'input.fa.s1.2.3.5.80.10.40.100000.50000.1.txt.html', 'input.fa.s2.2.3.5.80.10.40.100000.50000.1.html', 'input.fa.s2.2.3.5.80.10.40.100000.50000.1.txt.html']
+INFO dat 文件: /data/tmp/tmp0ejnk367/input.fa.2.3.5.80.10.40.100000.50000.dat
+[14/Apr/2026 02:32:28] "POST /annotate/ HTTP/1.1" 200 104410
+INFO 写入 IRF 输入文件: /data/tmp/tmpfrkh38r6/input.fa
+INFO 临时目录文件: ['input.fa', 'input.fa.2.3.5.80.10.40.100000.50000.dat', 'input.fa.2.3.5.80.10.40.100000.50000.summary.html', 'input.fa.s1.2.3.5.80.10.40.100000.50000.1.html', 'input.fa.s1.2.3.5.80.10.40.100000.50000.1.txt.html', 'input.fa.s2.2.3.5.80.10.40.100000.50000.1.html', 'input.fa.s2.2.3.5.80.10.40.100000.50000.1.txt.html']
+INFO dat 文件: /data/tmp/tmpfrkh38r6/input.fa.2.3.5.80.10.40.100000.50000.dat
+[14/Apr/2026 02:35:57] "POST /annotate/ HTTP/1.1" 200 104411

@@ -1,0 +1,101 @@
+{% extends "lir/base.html" %}
+
+{% block title %}Search by genomic location{% endblock %}
+
+{% block content %}
+<div class="section-title">● Search by genomic location</div>
+
+<form method="get">
+    <div class="form-grid">
+        <div class="form-block">
+            <label>▶ Choose genome</label>
+            <select name="accession" onchange="this.form.submit()">
+                <option value="">Please select</option>
+                {% for sp in species_list %}
+                    <option value="{{ sp.accession }}" {% if sp.accession == selected_accession %}selected{% endif %}>
+                        {{ sp.accession }}
+                    </option>
+                {% endfor %}
+            </select>
+        </div>
+
+        <div class="form-block">
+            <label>▶ Choose chromosome</label>
+            <select name="chrom" onchange="this.form.submit()" {% if not chrom_list %}disabled{% endif %}>
+                <option value="">Nothing selected</option>
+                {% for c in chrom_list %}
+                    <option value="{{ c.chrom }}" {% if c.chrom == selected_chr %}selected{% endif %}>
+                        {{ c.chrom }} ({{ c.size }})
+                    </option>
+                {% endfor %}
+            </select>
+        </div>
+
+        <div class="form-block">
+            <label>▶ Start</label>
+            <input type="number" name="start" value="{{ start }}" min="1">
+        </div>
+
+        <div class="form-block">
+            <label>▶ End</label>
+            <input type="number" name="end" value="{{ end }}" min="1" {% if chrom_max %}max="{{ chrom_max }}"{% endif %}>
+        </div>
+    </div>
+
+    {% if chrom_max %}
+        <p><strong>{{ selected_chr }}</strong> 最大长度：{{ chrom_max }}</p>
+    {% endif %}
+
+    <button type="submit">Search!</button>
+</form>
+
+{% if error_message %}
+    <p style="color:red; font-weight:bold;">错误：{{ error_message }}</p>
+{% endif %}
+
+<!-- ====================== ✅ 分页结果展示 ====================== -->
+{% if results_page %}
+    {% if results_page.object_list %}
+    <table>
+        <thead>
+            <tr>
+                {% for key, value in results_page.object_list.0.items %}
+                    <th>{{ key }}</th>
+                {% endfor %}
+            </tr>
+        </thead>
+        <tbody>
+            {% for row in results_page.object_list %}
+            <tr>
+                {% for key, value in row.items %}
+                    <td>
+                        {% if key == "ID" %}
+                            <a href="{% url 'lir_detail' selected_accession value %}">{{ value }}</a>
+                        {% else %}
+                            {{ value }}
+                        {% endif %}
+                    </td>
+                {% endfor %}
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+    {% else %}
+        <p>当前没有搜索结果。</p>
+    {% endif %}
+
+    <!-- ====================== ✅ 分页按钮 ====================== -->
+    <div style="margin-top:20px;">
+        {% if results_page.has_previous %}
+            <a href="?{{ request.GET.urlencode }}&page={{ results_page.previous_page_number }}">上一页</a>
+        {% endif %}
+
+        第 {{ results_page.number }} / {{ results_page.paginator.num_pages }} 页
+
+        {% if results_page.has_next %}
+            <a href="?{{ request.GET.urlencode }}&page={{ results_page.next_page_number }}">下一页</a>
+        {% endif %}
+    </div>
+{% endif %}
+
+{% endblock %}

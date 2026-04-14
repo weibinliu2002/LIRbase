@@ -1,0 +1,91 @@
+{% extends "lir/base.html" %}
+
+{% block title %}Search by LIR identifier{% endblock %}
+
+{% block content %}
+<div class="section-title">● Search by LIR identifier</div>
+
+<form method="get">
+    <div class="form-grid">
+        <div class="form-block">
+            <label>▶ Choose genome</label>
+            <select name="accession">
+                <option value="">Please select</option>
+                {% for sp in species_list %}
+                    <option value="{{ sp.accession }}" {% if sp.accession == selected_accession %}selected{% endif %}>
+                        {{ sp.accession }}
+                    </option>
+                {% endfor %}
+            </select>
+        </div>
+
+        <div></div>
+
+        <div class="form-block" style="grid-column: 1 / span 2;">
+            <label>▶ Input LIR identifiers (one per line)</label>
+            <textarea name="lir_ids" rows="12" style="width:100%;">{{ query_text }}</textarea>
+        </div>
+    </div>
+
+    <div style="margin-top: 15px; display:flex; gap:10px; flex-wrap:wrap;">
+        <button type="submit" name="action" value="search">Search!</button>
+        <button type="submit" name="action" value="reset">Reset</button>
+        <button type="submit" name="action" value="example">Load example</button>
+    </div>
+</form>
+
+{% if error_message %}
+    <p style="color:red; font-weight:bold; margin-top:20px;">错误：{{ error_message }}</p>
+{% endif %}
+
+{% if results_page %}
+<table style="margin-top:20px;">
+    <thead>
+        <tr>
+            {% for key, value in results_page.object_list.0.items %}
+                <th>{{ key }}</th>
+            {% endfor %}
+        </tr>
+    </thead>
+    <tbody>
+        {% for row in results_page %}
+        <tr>
+            {% for key, value in row.items %}
+                <td>
+                    {% if key == "ID" %}
+                        <a href="{% url 'lir_detail' selected_accession value %}">{{ value }}</a>
+                    {% else %}
+                        {{ value }}
+                    {% endif %}
+                </td>
+            {% endfor %}
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
+
+<div style="margin-top:20px;">
+    <span>第 {{ results_page.number }} 页 / 共 {{ results_page.paginator.num_pages }} 页</span>
+</div>
+
+<div style="margin-top:10px;">
+    {% if results_page.has_previous %}
+        <a href="?accession={{ selected_accession }}&lir_ids={{ query_text|urlencode }}&page=1&action=search">首页</a>
+        <a href="?accession={{ selected_accession }}&lir_ids={{ query_text|urlencode }}&page={{ results_page.previous_page_number }}&action=search">上一页</a>
+    {% endif %}
+
+    {% if results_page.has_next %}
+        <a href="?accession={{ selected_accession }}&lir_ids={{ query_text|urlencode }}&page={{ results_page.next_page_number }}&action=search">下一页</a>
+        <a href="?accession={{ selected_accession }}&lir_ids={{ query_text|urlencode }}&page={{ results_page.paginator.num_pages }}&action=search">末页</a>
+    {% endif %}
+</div>
+
+<div style="margin-top:8px;">
+    <span>当前页记录数：{{ results_page|length }}</span>
+    <span style="margin-left:20px;">总记录数：{{ results_page.paginator.count }}</span>
+</div>
+
+{% elif query_text %}
+    <p style="margin-top:20px;">没有检索到结果。</p>
+{% endif %}
+{% endblock %}

@@ -1,0 +1,15 @@
+Inverted Repeats Finder Program writen by:
+
+Gary Benson
+Bioinformatics Program
+Boston University
+Version 3.09
+
+
+Sequence: gi|27469357|ref|NC_001133.2| Saccharomyces cerevisiae chromosome I, complete chromosome sequence
+
+
+
+Parameters: 2 3 5 80 10 40 100000 50000 200 400 -d -f 
+
+

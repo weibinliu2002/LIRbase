@@ -1,0 +1,82 @@
+{% extends "lir/base.html" %}
+
+{% block title %}{{ species.accession }}{% endblock %}
+
+{% block content %}
+<h1>{{ species.accession }}</h1>
+
+<p>
+    <a href="{% url 'species_list' species.division %}">返回 {{ species.division }} 物种列表</a>
+</p>
+
+<h2>物种基本信息</h2>
+<table border="1" cellpadding="6">
+    <tbody>
+        <tr><th>Accession</th><td>{{ species.accession }}</td></tr>
+        <tr><th>Species</th><td>{{ species.species }}</td></tr>
+        <tr><th>Division</th><td>{{ species.division }}</td></tr>
+        <tr><th>Ploidy</th><td>{{ species.ploidy }}</td></tr>
+        <tr><th>Number of LIR</th><td>{{ species.number_of_lir }}</td></tr>
+        <tr><th>Genome Length</th><td>{{ species.genome_length }}</td></tr>
+    </tbody>
+</table>
+
+<br>
+
+<h2>LIR 主表</h2>
+
+{% if error_message %}
+    <p style="color:red;">错误：{{ error_message }}</p>
+{% endif %}
+
+{% if lir_rows_page %}
+<table border="1" cellpadding="6">
+    <thead>
+        <tr>
+            {% for key, value in lir_rows_page.object_list.0.items %}
+                <th>{{ key }}</th>
+            {% endfor %}
+        </tr>
+    </thead>
+    <tbody>
+        {% for row in lir_rows_page %}
+        <tr>
+            {% for key, value in row.items %}
+                <td>
+                    {% if key == "ID" %}
+                        <a href="{% url 'lir_detail' species.accession value %}">{{ value }}</a>
+                    {% else %}
+                        {{ value }}
+                    {% endif %}
+                </td>
+            {% endfor %}
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
+
+<div style="margin-top:20px;">
+    <span>第 {{ lir_rows_page.number }} 页 / 共 {{ lir_rows_page.paginator.num_pages }} 页</span>
+</div>
+
+<div style="margin-top:10px;">
+    {% if lir_rows_page.has_previous %}
+        <a href="?page=1">首页</a>
+        <a href="?page={{ lir_rows_page.previous_page_number }}">上一页</a>
+    {% endif %}
+
+    {% if lir_rows_page.has_next %}
+        <a href="?page={{ lir_rows_page.next_page_number }}">下一页</a>
+        <a href="?page={{ lir_rows_page.paginator.num_pages }}">末页</a>
+    {% endif %}
+</div>
+
+<div style="margin-top:8px;">
+    <span>当前页记录数：{{ lir_rows_page|length }}</span>
+    <span style="margin-left:20px;">总记录数：{{ lir_rows_page.paginator.count }}</span>
+</div>
+
+{% else %}
+<p>当前没有 LIR 数据。</p>
+{% endif %}
+{% endblock %}

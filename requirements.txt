@@ -1,0 +1,5 @@
+Bio==1.8.1
+biopython==1.86
+Django==6.0.4
+pandas==3.0.2
+rpy2==3.5.10

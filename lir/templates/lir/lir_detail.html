@@ -1,0 +1,115 @@
+{% extends "lir/base.html" %}
+
+{% block title %}LIR 详情{% endblock %}
+
+{% block content %}
+<h1>LIR 详情</h1>
+
+<p>
+    <a href="{% url 'species_detail' species.accession %}">返回物种详情页</a>
+</p>
+
+{% if error_message %}
+    <p style="color:red;">错误：{{ error_message }}</p>
+{% endif %}
+
+<h2>所属物种</h2>
+<table border="1" cellpadding="6">
+    <tbody>
+        <tr><th>Accession</th><td>{{ species.accession }}</td></tr>
+        <tr><th>Species</th><td>{{ species.species }}</td></tr>
+        <tr><th>Division</th><td>{{ species.division }}</td></tr>
+    </tbody>
+</table>
+
+<br>
+
+<h2>LIR ID</h2>
+<p>{{ lir_id }}</p>
+
+<br>
+
+<h2>LIR 基本信息</h2>
+{% if lir_row %}
+<table border="1" cellpadding="6">
+    <tbody>
+        {% for key, value in lir_row.items %}
+        <tr>
+            <th>{{ key }}</th>
+            <td>{{ value }}</td>
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
+{% else %}
+<p>没有找到该 LIR 的基本信息。</p>
+{% endif %}
+
+<br>
+
+<h2>LIR 序列</h2>
+{% if sequence %}
+<div style="
+    width: 100%;
+    padding: 10px;
+    min-height: 120px;
+    white-space: pre-wrap;
+    word-break: break-all;
+    background: white;
+    border: 1px solid #999;
+    overflow: auto;
+">
+{{ sequence }}
+</div>
+{% else %}
+<p>没有找到该 LIR 的序列。</p>
+{% endif %}
+
+<br>
+
+<h2>与基因重叠信息</h2>
+{% if overlap_rows %}
+<table border="1" cellpadding="6">
+    <thead>
+        <tr>
+            {% for key, value in overlap_rows.0.items %}
+                <th>{{ key }}</th>
+            {% endfor %}
+        </tr>
+    </thead>
+    <tbody>
+        {% for row in overlap_rows %}
+        <tr>
+            {% for key, value in row.items %}
+                <td>{{ value }}</td>
+            {% endfor %}
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
+{% else %}
+<p>没有找到该 LIR 的基因重叠信息。</p>
+{% endif %}
+
+<br>
+
+<h2>IRF / Alignment 信息</h2>
+{% if align_text %}
+<div style="
+    width: 100%;
+    padding: 10px;
+    min-height: 300px;
+    white-space: pre-wrap;
+    word-break: break-word;
+    background: white;
+    border: 1px solid #999;
+    overflow: auto;
+    font-family: monospace;
+">
+{{ align_text }}
+</div>
+{% else %}
+<p>没有找到该 LIR 的 alignment 信息。</p>
+{% endif %}
+
+{% endblock %}

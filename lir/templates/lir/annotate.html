@@ -1,0 +1,181 @@
+{% extends "lir/base.html" %}
+{% block title %}Annotate{% endblock %}
+
+{% block content %}
+<div class="section-title">● Annotate LIRs</div>
+
+<form method="post" enctype="multipart/form-data">
+    {% csrf_token %}
+    <div style="display:grid; grid-template-columns:1.2fr 1fr; gap:20px;">
+        <div>
+            <div class="form-block">
+                <label>FASTA</label>
+                <textarea name="sequence" rows="14">{{ fasta_text }}</textarea>
+            </div>
+            <div class="form-block">
+                <label>Upload</label>
+                <input type="file" name="fasta_file">
+            </div>
+        </div>
+
+        <div>
+            <div class="form-block"><label>Match</label><input type="number" name="match" value="{{ match }}"></div>
+            <div class="form-block"><label>Mismatch</label><input type="number" name="mismatch" value="{{ mismatch }}"></div>
+            <div class="form-block"><label>Delta</label><input type="number" name="delta" value="{{ delta }}"></div>
+            <div class="form-block"><label>PM</label><input type="number" name="pm" value="{{ pm }}"></div>
+            <div class="form-block"><label>PI</label><input type="number" name="pi" value="{{ pi }}"></div>
+            <div class="form-block"><label>Min Score</label><input type="number" name="minscore" value="{{ minscore }}"></div>
+            <div class="form-block"><label>Max Stem</label><input type="number" name="maxlength" value="{{ maxlength }}"></div>
+            <div class="form-block"><label>Max Loop</label><input type="number" name="maxloop" value="{{ maxloop }}"></div>
+            <div class="form-block"><label>Flank</label><input type="number" name="flanklen" value="{{ flanklen }}"></div>
+
+            <div style="margin-top:20px; gap:10px; display:flex;">
+                <button type="submit" name="action" value="submit">Submit</button>
+                <button type="submit" name="action" value="reset">Reset</button>
+                <button type="submit" name="action" value="example">Example</button>
+            </div>
+        </div>
+    </div>
+</form>
+
+{% if error_message %}
+<p style="color:red; white-space:pre-wrap;">{{ error_message }}</p>
+{% endif %}
+
+{% if message %}
+<p style="color:#cc6600; font-weight:bold; margin-top:20px;">{{ message }}</p>
+{% endif %}
+
+{% if debug_cmd %}
+<details style="margin-top:20px;">
+    <summary><strong>Debug information</strong></summary>
+    <div style="margin-top:10px;">
+        <p><strong>Command:</strong></p>
+        <pre style="white-space:pre-wrap;">{{ debug_cmd }}</pre>
+
+        <p><strong>Temp files:</strong></p>
+        <pre style="white-space:pre-wrap;">{{ debug_files }}</pre>
+
+        {% if debug_log %}
+        <p><strong>IRF stdout:</strong></p>
+        <pre style="white-space:pre-wrap;">{{ debug_log }}</pre>
+        {% endif %}
+    </div>
+</details>
+{% endif %}
+
+{% if results %}
+    {{ fasta_map|json_script:"fasta-map" }}
+    {{ align_map|json_script:"align-map" }}
+
+    <h2>Results</h2>
+    <table border="1" cellpadding="6" cellspacing="0" style="width:100%;border-collapse:collapse;">
+        <tr style="background:#f2f2f2;">
+            <th>ID</th>
+            <th>chr</th>
+            <th>LStart</th>
+            <th>LEnd</th>
+            <th>LLen</th>
+            <th>RStart</th>
+            <th>REnd</th>
+            <th>RLen</th>
+            <th>Loop</th>
+            <th>Match%</th>
+            <th>Indel%</th>
+            <th>Score</th>
+            <th>LIR-Seq</th>
+        </tr>
+        {% for row in results %}
+        <tr>
+            <td>{{ row.ID }}</td>
+            <td>{{ row.chr }}</td>
+            <td>{{ row.Left_start }}</td>
+            <td>{{ row.Left_end }}</td>
+            <td>{{ row.Left_len }}</td>
+            <td>{{ row.Right_start }}</td>
+            <td>{{ row.Right_end }}</td>
+            <td>{{ row.Right_len }}</td>
+            <td>{{ row.Loop_len }}</td>
+            <td>{{ row.Match_per }}</td>
+            <td>{{ row.Indel_per }}</td>
+            <td>{{ row.Score }}</td>
+            <td>
+                <button type="button" onclick="showLirDetail('{{ row.ID|escapejs }}')">View</button>
+            </td>
+        </tr>
+        {% endfor %}
+    </table>
+
+    <div id="lir-detail-panel" style="display:none; margin-top:30px;">
+        <h3>Selected LIR: <span id="lir-selected-id"></span></h3>
+
+        <div class="form-block" style="margin-top:20px;">
+            <label>
+                Sequence of selected LIR
+                <span style="color:blue;">(flank, lower case)</span> -
+                <span style="color:darkcyan;">(arm, upper case)</span> -
+                <span style="color:lightcoral;">(loop, lower case)</span> -
+                <span style="color:darkcyan;">(arm, upper case)</span> -
+                <span style="color:blue;">(flank, lower case)</span>
+            </label>
+            <div id="lir-seq-box" style="padding:12px; border:1px solid #ddd; background:#fff; word-break:break-all; line-height:1.8;"></div>
+        </div>
+
+        <div class="form-block" style="margin-top:20px;">
+            <label>Alignment / structure of selected LIR</label>
+            <pre id="lir-align-box" style="padding:12px; border:1px solid #ddd; background:#fff; white-space:pre-wrap; max-height:400px; overflow:auto;"></pre>
+        </div>
+    </div>
+
+    <script>
+        function escapeHtml(text) {
+            return text
+                .replaceAll("&", "&amp;")
+                .replaceAll("<", "&lt;")
+                .replaceAll(">", "&gt;")
+                .replaceAll('"', "&quot;")
+                .replaceAll("'", "&#039;");
+        }
+
+        function colorizeSequence(seq) {
+            const m = seq.match(/^([acgtnN]*)([ACGTN]+)([acgtnN]*)([ACGTN]+)([acgtnN]*)$/);
+
+            if (!m) {
+                return '<div style="word-break:break-all;">' + escapeHtml(seq) + '</div>';
+            }
+
+            return ''
+                + '<span style="color:blue; font-weight:bold;">' + escapeHtml(m[1]) + '</span>'
+                + '<span style="color:darkcyan; font-weight:bold;">' + escapeHtml(m[2]) + '</span>'
+                + '<span style="color:lightcoral; font-weight:bold;">' + escapeHtml(m[3]) + '</span>'
+                + '<span style="color:darkcyan; font-weight:bold;">' + escapeHtml(m[4]) + '</span>'
+                + '<span style="color:blue; font-weight:bold;">' + escapeHtml(m[5]) + '</span>';
+        }
+
+        function showLirDetail(id) {
+            const fastaMap = JSON.parse(document.getElementById("fasta-map").textContent || "{}");
+            const alignMap = JSON.parse(document.getElementById("align-map").textContent || "{}");
+
+            document.getElementById("lir-selected-id").textContent = id;
+
+            const seq = fastaMap[id] || "";
+            if (seq) {
+                document.getElementById("lir-seq-box").innerHTML = colorizeSequence(seq);
+            } else {
+                document.getElementById("lir-seq-box").innerHTML = '<span style="color:#999;">没有可显示的序列</span>';
+            }
+
+            const align = alignMap[id] || [];
+            if (Array.isArray(align) && align.length > 0) {
+                document.getElementById("lir-align-box").textContent = align.join("\n");
+            } else {
+                document.getElementById("lir-align-box").textContent = "没有可显示的 alignment";
+            }
+
+            document.getElementById("lir-detail-panel").style.display = "block";
+            document.getElementById("lir-detail-panel").scrollIntoView({behavior: "smooth", block: "start"});
+        }
+    </script>
+{% endif %}
+
+{% endblock %}

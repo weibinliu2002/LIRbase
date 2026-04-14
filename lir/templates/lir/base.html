@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>{% block title %}LIRBase{% endblock %}</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: #f2f2f2;
+        }
+
+        .top-banner {
+            background: #0b7bb8;
+            color: white;
+            padding: 28px 36px;
+            font-size: 34px;
+            font-weight: 300;
+        }
+
+        .navbar {
+            display: flex;
+            background: #ececec;
+            border-bottom: 1px solid #d0d0d0;
+        }
+
+        .nav-item {
+            position: relative;
+        }
+
+        .nav-link {
+            display: block;
+            padding: 24px 28px;
+            text-decoration: none;
+            color: #222;
+            font-size: 24px;
+            font-weight: 700;
+        }
+
+        .nav-link:hover {
+            background: #dcdcdc;
+        }
+
+        .dropdown-menu {
+            display: none;
+            position: absolute;
+            top: 100%;
+            left: 0;
+            min-width: 420px;
+            background: #f7f7f7;
+            border: 1px solid #d5d5d5;
+            z-index: 1000;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.12);
+        }
+
+        .dropdown-menu a {
+            display: block;
+            padding: 18px 28px;
+            text-decoration: none;
+            color: #666;
+            font-size: 22px;
+            font-weight: 700;
+            border-bottom: 1px solid #e5e5e5;
+        }
+
+        .dropdown-menu a:hover,
+        .dropdown-menu a.active {
+            background: #2e86c8;
+            color: white;
+        }
+
+        .nav-item:hover .dropdown-menu {
+            display: block;
+        }
+
+        .page-container {
+            padding: 34px 44px;
+            background: #f5f5f5;
+            min-height: 700px;
+        }
+
+        /* 修复Diploidy标题样式：白色大字体，和截图一致 */
+        .diploidy-title {
+            font-size: 80px;
+            font-weight: bold;
+            color: #ffffff; /* 白色 */
+            margin: 40px 0;
+        }
+
+        .section-title {
+            color: red;
+            font-size: 22px;
+            font-weight: 700;
+            margin: 18px 0;
+        }
+
+        .form-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 36px;
+            margin-top: 12px;
+            margin-bottom: 28px;
+        }
+
+        .form-block label {
+            display: block;
+            color: red;
+            font-size: 20px;
+            font-weight: 700;
+            margin-bottom: 12px;
+        }
+
+        input, select, textarea {
+            width: 100%;
+            box-sizing: border-box;
+            padding: 12px 14px;
+            font-size: 18px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            background: white;
+        }
+
+        button {
+            background: #10b35c;
+            border: none;
+            color: white;
+            padding: 12px 24px;
+            font-size: 18px;
+            font-weight: 700;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background: #0e9a50;
+        }
+
+        .result-bar {
+            background: black;
+            color: white;
+            padding: 14px 18px;
+            font-size: 20px;
+            font-weight: 700;
+            margin-top: 30px;
+            margin-bottom: 20px;
+        }
+
+        table {
+            border-collapse: collapse;
+            width: 100%;
+            background: white;
+        }
+
+        th, td {
+            border: 1px solid #999;
+            padding: 8px 10px;
+            text-align: left;
+            font-size: 14px;
+        }
+
+        th {
+            background: #f0f0f0;
+        }
+    </style>
+</head>
+<body>
+    <div class="top-banner">
+        Cotton LIR Database: a comprehensive collection of long inverted repeats in Cotton
+    </div>
+
+    <div class="navbar">
+        <div class="nav-item">
+            <a class="nav-link" href="/">Home</a>
+        </div>
+
+        <div class="nav-item">
+            <a class="nav-link" href="#">Browse</a>
+            <div class="dropdown-menu">
+                <a href="/browse/Diploidy/">Browse Diploidy</a>
+                <a href="/browse/Tetraploidy/">Browse Tetraploidy</a>
+                <a href="/browse/Other/">Browse Other</a>
+            </div>
+        </div>
+
+        <div class="nav-item">
+            <a class="nav-link" href="#">Search</a>
+            <div class="dropdown-menu">
+                <a href="/search/region/">Search by genomic location</a>
+                <a href="/search/id/">Search by LIR identifier</a>
+                <a href="{% url 'search_blast' %}">BLAST</a>
+            </div>
+        </div>
+
+        <div class="nav-item">
+            <a class="nav-link" href="{% url 'annotate_page' %}">Annotate</a>
+        </div>
+    </div>
+
+    <div class="page-container">
+        {% block content %}
+        <!-- 这里是Diploidy页面的内容，和截图完全匹配 -->
+        <div class="diploidy-title">Diploidy 物种列表</div>
+        <table>
+            <thead>
+                <tr>
+                    <th>Accession</th>
+                    <th>Species</th>
+                    <th>Division</th>
+                    <th>Ploidy</th>
+                    <th>Number of LIR</th>
+                    <th>Genome Length</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><a href="#">A1_Mutema_genome_WHU_v1.1</a></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+            </tbody>
+        </table>
+        {% endblock %}
+    </div>
+</body>
+</html>
